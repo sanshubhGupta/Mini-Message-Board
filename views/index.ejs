@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>
+            <%=title %>
+        </title>
+    </head>
+    <body>
+        <h1>Messages</h1>
+        <a href="/new">Add a message</a>
+        <ul>
+            <% messages.forEach(function(msg, index){ %>
+                <li>
+                    <strong>by <%= msg.user %></strong><br/>
+                    <a href="/messageDetails/<%= index %>">
+                        <button>Open</button>
+                    </a>
+                </li>
+            <% }); %>
+        </ul>
+    </body>
+</html>
