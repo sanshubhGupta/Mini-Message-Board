@@ -13,7 +13,7 @@ app.use('/', indexRouter);
 app.use('/new', newRouter);
 app.use('/messageDetails', messageRouter);
 
-const PORT = 8384;
+const PORT = process.env.port || 8384;
 
 app.listen(PORT, ()=>{
     console.log(`App listening on port, ${PORT}`);
